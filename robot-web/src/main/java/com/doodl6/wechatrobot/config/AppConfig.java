@@ -23,4 +23,9 @@ public class AppConfig {
      * 图灵机器人应用key
      */
     public String apiKey;
+
+    /**
+     * chatgpt应用key
+     */
+    public String chatGptKey;
 }

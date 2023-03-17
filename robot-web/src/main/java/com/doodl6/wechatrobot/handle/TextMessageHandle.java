@@ -3,7 +3,7 @@ package com.doodl6.wechatrobot.handle;
 import com.doodl6.wechatrobot.config.KeywordConfig;
 import com.doodl6.wechatrobot.domain.WeChatMessage;
 import com.doodl6.wechatrobot.response.BaseMessage;
-import com.doodl6.wechatrobot.service.TulingService;
+import com.doodl6.wechatrobot.service.ChatGptService;
 import com.doodl6.wechatrobot.util.LogUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +18,11 @@ import javax.annotation.Resource;
 @Slf4j
 public class TextMessageHandle implements WeChatMessageHandle {
 
+//    @Resource
+//    private TulingService tulingService;
+
     @Resource
-    private TulingService tulingService;
+    private ChatGptService chatGptService;
 
     @Autowired(required = false)
     private KeywordConfig keywordConfig;
@@ -39,7 +42,7 @@ public class TextMessageHandle implements WeChatMessageHandle {
         }
 
         if (message == null) {
-            message = tulingService.getTulingResponse(content, fromUserName);
+            message = chatGptService.getChatGptResponse(content, fromUserName);
         }
 
         if (message != null) {

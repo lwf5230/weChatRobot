@@ -6,5 +6,6 @@ spring:
   profiles:
     active: @activeProfile@
 app:
-  token: atming_
+  token: psxfjstxzk
   apiKey: 28f46f7363c0442dbe8caf6261284fb5
+  chatGptKey: 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

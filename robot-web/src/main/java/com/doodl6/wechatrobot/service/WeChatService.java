@@ -81,6 +81,7 @@ public class WeChatService {
             resultMessage = new TextMessage(toUserName,
                     fromUserName, "我竟无言以对！");
         }
+        log.info(resultMessage.toString());
 
         return resultMessage;
     }

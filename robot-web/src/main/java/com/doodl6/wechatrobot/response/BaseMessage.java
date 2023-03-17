@@ -7,6 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * 响应消息基类（公众帐号 -> 普通用户）
@@ -15,6 +16,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @JacksonXmlRootElement(localName = "xml")
+@ToString
 public class BaseMessage {
 
     /**
