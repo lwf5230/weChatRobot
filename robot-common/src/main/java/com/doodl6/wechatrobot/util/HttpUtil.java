@@ -21,7 +21,7 @@ public final class HttpUtil {
     }
 
     public static String post(String url, String requestBodyJson) {
-        Request request = new Request.Builder().url(url).post(RequestBody.create(requestBodyJson, MEDIA_TYPE)).build();
+        Request request = new Request.Builder().url(url).post(RequestBody.create(MEDIA_TYPE, requestBodyJson)).build();
         return executeRequest(request);
     }
 
